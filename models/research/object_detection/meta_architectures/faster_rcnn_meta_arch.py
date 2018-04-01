@@ -1960,7 +1960,7 @@ class FasterRCNNMetaArch(model.DetectionModel):
           self.second_stage_feature_extractor_scope)
 
     variables_to_restore = tf.global_variables()
-    variables_to_restore.append(slim.get_or_create_global_step())
+    variables_to_restore.append(tf.train.get_or_create_global_step())
     # Only load feature extractor variables to be consistent with loading from
     # a classification checkpoint.
     include_patterns = None

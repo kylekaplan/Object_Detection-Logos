@@ -2,6 +2,12 @@
 
 ## Setup Environment
 * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Installation</a><br>
+*  \*Working with tensorflow 1.7
+
+	```
+	pip install tensorflow --upgrade
+	pip install tensorflow-gpu --upgrade
+	```
 
 ## Create train.record and eval.record files
 * Connor Dowload from <a href='https://drive.google.com/drive/u/1/folders/11HkDmKfCwm-H8lBktsSFNaZXsEc5cNqt'>here</a> and place in ```models\research\object_detection\Logos\data\```<br>
