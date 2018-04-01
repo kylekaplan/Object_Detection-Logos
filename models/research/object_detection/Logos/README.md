@@ -22,9 +22,11 @@ The file structure should look like this:
 
 ## Configure pipeline.config
 * Open ```pipeline.config``` edit to put in your path (full path is required).
-* Connor where ever you see ```C:\\Users\\Kyle\\Desktop\\college\\Senior_Project\\object_detection-logos\\``` replace with your path
+* Connor wherever you see ```C:\\Users\\Kyle\\Desktop\\college\\Senior_Project\\object_detection-logos\\``` replace with your path
 
 ## Run Training and Evaluation
+* It seems train and eval are supposed to run at the same time alough I think you can aget way with running one at a time.
+
 * From <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_locally.md'>tensorflow/models/research/object_detection/g3doc/running_locally.md</a><br>
 
 	### Running the Training Job
@@ -36,7 +38,6 @@ The file structure should look like this:
 	    --pipeline_config_path=${PATH_TO_YOUR_PIPELINE_CONFIG} \
 	    --train_dir=${PATH_TO_TRAIN_DIR}
 	```
-
 		where `${PATH_TO_YOUR_PIPELINE_CONFIG}` points to the pipeline config and `${PATH_TO_TRAIN_DIR}` points to the directory in which training checkpoints and events will be written to. By default, the training job will run indefinitely until the user kills it.
 
 	* Connor your command would be ```$ python object_detection\train.py --logtostderr --pipeline_config_path=object_detection\Logos\models\model\pipeline.config --train_dir=object_detection\Logos\models\model\train\```
