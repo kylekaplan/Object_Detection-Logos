@@ -9,6 +9,8 @@
 	pip install tensorflow-gpu --upgrade
 	```
 
+* For cocoapi on windows, edit setup.py as shown <a href='https://github.com/cocodataset/cocoapi/compare/master...willyd:windows?expand=1'>here</a> and run make file manually if you need to.
+
 ## Create train.record and eval.record files
 * Connor Dowload from <a href='https://drive.google.com/drive/u/1/folders/11HkDmKfCwm-H8lBktsSFNaZXsEc5cNqt'>here</a> and place in ```models\research\object_detection\Logos\data\```<br>
 
