@@ -78,5 +78,23 @@ tensorboard --logdir=${PATH_TO_MODEL_DIRECTORY}
 ```
 
 where `${PATH_TO_MODEL_DIRECTORY}` points to the directory that contains the
-train and eval directories. Please note it may take Tensorboard a couple minutes
-to populate with data.
+train and eval directories. Please note it may take Tensorboard a couple minutes to populate with data.
+
+Our command:```$ tensorboard --logdir=object_detection\Logos\models\model```
+
+## Exporting a trained model for inference (create .pb file)
+
+* From <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/exporting_models.md'>tensorflow/models/research/object_detection/g3doc/exporting_models.md</a><br>
+
+
+	```
+	# From tensorflow/models/research/
+	python object_detection/export_inference_graph.py \
+	    --input_type image_tensor \
+	    --pipeline_config_path ${PIPELINE_CONFIG_PATH} \
+	    --trained_checkpoint_prefix ${TRAIN_PATH} \
+	    --output_directory output_inference_graph.pb
+	```
+
+* Our Command is 
+```$ python object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path .\object_detection\Logos\models\model\pipeline.config --trained_checkpoint_prefix .\object_detection\Logos\models\model\train\model.ckpt-${#_OF_LATEST} --output_directory .\output_inference_graph.pb```

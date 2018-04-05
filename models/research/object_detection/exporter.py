@@ -348,7 +348,7 @@ def _build_detection_graph(input_type, detection_model, input_shape,
       output_collection_name=output_collection_name)
 
   # Add global step to the graph.
-  slim.get_or_create_global_step()
+  tf.train.get_or_create_global_step()
 
   if graph_hook_fn: graph_hook_fn()
 
